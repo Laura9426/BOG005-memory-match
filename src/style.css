@@ -1,0 +1,107 @@
+*{
+   margin: 0;
+   padding: 0; 
+}
+
+body{
+    background: #AFF4C6;
+    text-align: center;
+}
+
+#contenedor-cartas{
+    width: 100%;
+    max-width: 900px;
+    padding: 15px 15px 5px 15px;
+    border: 1px solid white;
+    margin: 0 auto;
+    display: flex;  /**/
+    flex-wrap: wrap; /*acomoda las imagenes pone solo las que quedan y las demas las bajan*/
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.carta-box {
+    
+    width: 200px;
+    height: 250px;
+    position: relative;
+    perspective: 1000px;
+    margin: 0 10px 20px 10px;
+  }
+
+  .carta-box input[type=checkbox]{
+
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .carta-box input[type=checkbox]:checked+label .carta{
+    transform: rotateY(180deg);
+  }
+
+
+  /*.carta-box:hover .carta {
+      transform: rotateY(180deg);
+  }*/
+  
+  .carta {
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+  }
+  
+  .cara {
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .cara.detras {
+    transform: rotateY(180deg);
+    background: white;
+  }
+
+
+
+
+
+/*
+#cartas-box{
+    width: 600px;
+    height: 600px;
+    border: 1px solid red;
+}
+
+.box{
+    width: 200px; 
+    height: 270px; 
+    position: relative;
+    perspective: 1000px;
+}
+
+.carta{
+   transform-style: preserve-3d;
+   transition: all 0.5s linear; 
+}
+
+.box:hover .carta{
+
+    transform: rotateY(180deg);
+
+}
+
+
+.carta img{
+
+    width: 100%;
+
+}
+
+.cara1{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.cara2{
+    transform: rotateY(180deg);
+    background: red;
+}
+*/

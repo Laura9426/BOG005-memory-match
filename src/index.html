@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Memory Match</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, 
+  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Memory Match</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>CONCENTRESE</h1>
+  </header>
+
+  <div id="contenedor-cartas">
+    <div class="carta-box">
+
+      <input type="checkbox" id="item1">
+      <label for="item1">
+
+        <div class="carta">
+          <div class="cara">
+            <img src="imagenes/carta-front.png" width="200" height="250px">
+          </div>
+          <div class="cara detras">
+            <img src="https://www.serebii.net/pokemongo/pokemon/001.png" width="200" height="250px">
+          </div>
+        </div>
+      </label>
+    </div>
+
+
+    <div class="carta-box">
+
+      <input type="checkbox" id="item2">
+      <label for="item2">
+
+        <div class="carta">
+          <div class="cara">
+            <img src="imagenes/carta-front.png" width="200" height="250px">
+          </div>
+          <div class="cara detras">
+            <img src="https://www.serebii.net/pokemongo/pokemon/001.png" width="200" height="250px">
+          </div>
+        </div>
+      </label>
+    </div>
+
+    
+
+    <!--cierre de contenedor-cartas-->
+  </div>
+
+
+
+
+
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
