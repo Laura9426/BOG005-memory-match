@@ -14,13 +14,25 @@
 //   .catch(console.error);
 //
 
+import pokemon from '../data/pokemon/pokemon.js';
+console.log(pokemon);
+
 const App = () => {
   const el = document.createElement('div');
 
   el.className = 'App';
+  el.id = 'App1'; 
   el.textContent = 'Hola mundo!';
+  this.img = pokemon.name.
 
   return el;
 };
+
+const img = document.createElement('img');
+
+img.src = "../data/pokemon/pokemon.js"
+img.alt = pokemon.id;
+
+document.body.appendChild(img);
 
 export default App;
