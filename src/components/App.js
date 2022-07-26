@@ -15,7 +15,81 @@
 //
 
 import pokemon from '../data/pokemon/pokemon.js';
-console.log(pokemon);
+//console.log(pokemon);
+
+let texto = '';
+pokemon.items.forEach( (item, i)=> {
+
+  texto = texto + '<div class="carta-box"> '+
+
+'<input type="checkbox" id="item' +  i  + ' "> ' +
+' <label for="item' +  i  +  '"> ' +
+
+  ' <div class="carta"> ' +
+    ' <div class="cara"> ' +
+      ' <img src="imagenes/carta-front.png" width="200" height="250px"> ' +
+    ' </div> ' +
+    ' <div class="cara detras"> ' +
+      ' <img src=' + item.image + ' width="200" height="250px"> ' +
+    ' </div> ' +
+  ' </div> ' +
+' </label> ' +
+'</div>';
+
+            console.log(i);
+
+
+  })
+
+  document.getElementById("contenedor-cartas").innerHTML = texto;
+            
+  //  document.getElementById("miguel").innerHTML = '<img src= '+item.image+' width="200" height="250px">';
+ 
+/*document.getElementById("contenedor-cartas").innerHTML =   
+
+'<div class="carta-box">
+
+<input type="checkbox" id="item1">
+<label for="item1">
+
+  <div class="carta">
+    <div class="cara">
+      <img src="imagenes/carta-front.png" width="200" height="250px">
+    </div>
+    <div class="cara detras">
+      <img src="https://www.serebii.net/pokemongo/pokemon/001.png" width="200" height="250px">
+    </div>
+  </div>
+</label>
+</div>';*/
+
+  //console.log(item.image);
+
+
+ 
+
+/*const el = document.createElement('div');
+    el.innerHTML = ` 
+    <div class="carta-box">
+
+    <input type="checkbox" id="item1">
+    <label for="item1">
+
+      <div class="carta">
+        <div class="cara">
+          <img src="imagenes/carta-front.png" width="200" height="250px">
+        </div>
+        <div class="cara detras">
+          <img src="https://www.serebii.net/pokemongo/pokemon/001.png" width="200" height="250px">
+        </div>
+      </div>
+    </label>
+  </div>
+  `*/
+
+
+
+
 
 const App = () => {
   const el = document.createElement('div');
@@ -23,16 +97,11 @@ const App = () => {
   el.className = 'App';
   el.id = 'App1'; 
   el.textContent = 'Hola mundo!';
-  this.img = pokemon.name.
+  
+  
 
   return el;
 };
 
-const img = document.createElement('img');
-
-img.src = "../data/pokemon/pokemon.js"
-img.alt = pokemon.id;
-
-document.body.appendChild(img);
 
 export default App;

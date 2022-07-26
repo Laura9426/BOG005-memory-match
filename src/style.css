@@ -33,6 +33,11 @@ body{
 
     position: absolute;
     opacity: 0;
+    z-index: 1;
+    width: 200px;
+    height: 250px;
+    top: 0;
+    left: 0;
   }
   
   .carta-box input[type=checkbox]:checked+label .carta{
