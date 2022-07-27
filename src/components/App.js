@@ -18,30 +18,54 @@ import pokemon from '../data/pokemon/pokemon.js';
 //console.log(pokemon);
 
 let texto = '';
+
+let azar = [];
+
 pokemon.items.forEach( (item, i)=> {
+  azar [i] = item.image;
+})
+
+azar = azar.concat(azar);
+
+
+for(let i= azar.length-1; i>0; i--){
+
+ let j = Math.floor(Math.random() * (i + 1));
+ 
+ [azar[i], azar[j]] = [azar[j], azar[i]];
+
+}
+
+
+for(let k = 0; k < azar.length; k++ ){
 
   texto = texto + '<div class="carta-box"> '+
 
-'<input type="checkbox" id="item' +  i  + ' "> ' +
-' <label for="item' +  i  +  '"> ' +
+'<input type="checkbox" id="item' +  k  + ' "> ' +
+' <label for="item' +  k  +  '"> ' +
 
   ' <div class="carta"> ' +
     ' <div class="cara"> ' +
       ' <img src="imagenes/carta-front.png" width="200" height="250px"> ' +
     ' </div> ' +
     ' <div class="cara detras"> ' +
-      ' <img src=' + item.image + ' width="200" height="250px"> ' +
+      ' <img src=' + azar[k] + ' width="200" height="250px"> ' +
     ' </div> ' +
   ' </div> ' +
 ' </label> ' +
 '</div>';
 
-            console.log(i);
-
-
-  })
+  }
+  
 
   document.getElementById("contenedor-cartas").innerHTML = texto;
+
+
+
+
+
+  
+  
             
   //  document.getElementById("miguel").innerHTML = '<img src= '+item.image+' width="200" height="250px">';
  
