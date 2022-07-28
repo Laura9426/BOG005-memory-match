@@ -15,20 +15,20 @@
 //
 
 import pokemon from '../data/pokemon/pokemon.js';
-//console.log(pokemon);
+import {Card} from './Card.js';
 
 let texto = '';
 
 let azar = [];
 
-pokemon.items.forEach( (item, i)=> {
-  azar [i] = item.image;
+pokemon.items.forEach( (item, i)=> {  //guardamos las imagenes en un array 
+  azar [i] = item.image;              //para podederlas duplicar y organizar
 })
 
-azar = azar.concat(azar);
+azar = azar.concat(azar);  //duplicamos las imagenes
 
 
-for(let i= azar.length-1; i>0; i--){
+for(let i= azar.length-1; i>0; i--){    //algoritmo fisher
 
  let j = Math.floor(Math.random() * (i + 1));
  
@@ -36,83 +36,16 @@ for(let i= azar.length-1; i>0; i--){
 
 }
 
+for(let k = 0; k < azar.length; k++ ){  //recorro el array para publicarlas en DOM
 
-for(let k = 0; k < azar.length; k++ ){
-
-  texto = texto + '<div class="carta-box"> '+
-
-'<input type="checkbox" id="item' +  k  + ' "> ' +
-' <label for="item' +  k  +  '"> ' +
-
-  ' <div class="carta"> ' +
-    ' <div class="cara"> ' +
-      ' <img src="imagenes/carta-front.png" width="200" height="250px"> ' +
-    ' </div> ' +
-    ' <div class="cara detras"> ' +
-      ' <img src=' + azar[k] + ' width="200" height="250px"> ' +
-    ' </div> ' +
-  ' </div> ' +
-' </label> ' +
-'</div>';
-
+    texto = texto + Card(azar[k], k);
   }
   
 
   document.getElementById("contenedor-cartas").innerHTML = texto;
 
 
-
-
-
   
-  
-            
-  //  document.getElementById("miguel").innerHTML = '<img src= '+item.image+' width="200" height="250px">';
- 
-/*document.getElementById("contenedor-cartas").innerHTML =   
-
-'<div class="carta-box">
-
-<input type="checkbox" id="item1">
-<label for="item1">
-
-  <div class="carta">
-    <div class="cara">
-      <img src="imagenes/carta-front.png" width="200" height="250px">
-    </div>
-    <div class="cara detras">
-      <img src="https://www.serebii.net/pokemongo/pokemon/001.png" width="200" height="250px">
-    </div>
-  </div>
-</label>
-</div>';*/
-
-  //console.log(item.image);
-
-
- 
-
-/*const el = document.createElement('div');
-    el.innerHTML = ` 
-    <div class="carta-box">
-
-    <input type="checkbox" id="item1">
-    <label for="item1">
-
-      <div class="carta">
-        <div class="cara">
-          <img src="imagenes/carta-front.png" width="200" height="250px">
-        </div>
-        <div class="cara detras">
-          <img src="https://www.serebii.net/pokemongo/pokemon/001.png" width="200" height="250px">
-        </div>
-      </div>
-    </label>
-  </div>
-  `*/
-
-
-
 
 
 const App = () => {

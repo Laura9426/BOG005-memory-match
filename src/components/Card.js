@@ -1,23 +1,27 @@
-export function Card (item){
+export function Card (item, i){
 
-    const el = document.createElement('div');
-    el.innerHTML = ` 
+    
+     return(
+
+      ` 
     <div class="carta-box">
 
-    <input type="checkbox" id="item1">
-    <label for="item1">
+    <input type="checkbox" id= ${i}>
+    <label for= ${i}>
 
       <div class="carta">
         <div class="cara">
           <img src="imagenes/carta-front.png" width="200" height="250px">
         </div>
         <div class="cara detras">
-          <img src="https://www.serebii.net/pokemongo/pokemon/001.png" width="200" height="250px">
+          <img src= ${item} width="200" height="250px">
         </div>
       </div>
     </label>
   </div>
   `
+
+     ) 
 
 
 } 
