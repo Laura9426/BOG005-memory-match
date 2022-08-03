@@ -31,6 +31,11 @@ header{
   margin: 0 auto;
 }
 
+#contenedorPrincipal{
+
+  text-align: center;
+}
+
 #root{
 
   text-align: center;
@@ -89,6 +94,30 @@ header{
 
 
 
+  #iniciar{
+
+    color: white;
+    background: #0D99FF;
+    background-size: 35px;
+    background-position: 10px;
+    border: 0;
+    border-radius: 10px 0px; /*esquinas redondas*/
+    padding: 12px 25px 12px 50px;
+    font-size: 17px;
+    font-weight: bold; /*letra negrilla*/
+    cursor: pointer;
+    margin-top: 30px;
+    text-transform: uppercase;
+
+  }
+
+  #iniciar:hover{
+
+    padding: 12px 35px 12px 60px;
+      box-shadow: 0 0 10px #9553f9;
+      font-size: 20px;
+      transition: all 0.3s linear;
+  }
 
   #reiniciar{
     color: white;
@@ -135,46 +164,3 @@ header{
       }
 
       
-
-/*
-#cartas-box{
-    width: 600px;
-    height: 600px;
-    border: 1px solid red;
-}
-
-.box{
-    width: 200px; 
-    height: 270px; 
-    position: relative;
-    perspective: 1000px;
-}
-
-.carta{
-   transform-style: preserve-3d;
-   transition: all 0.5s linear; 
-}
-
-.box:hover .carta{
-
-    transform: rotateY(180deg);
-
-}
-
-
-.carta img{
-
-    width: 100%;
-
-}
-
-.cara1{
-    position: absolute;
-    backface-visibility: hidden;
-}
-
-.cara2{
-    transform: rotateY(180deg);
-    background: red;
-}
-*/

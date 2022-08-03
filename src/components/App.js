@@ -1,36 +1,15 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
-
 import pokemon from '../data/pokemon/pokemon.js';
 
-let comparar = [];
 let texto = "";
 let azar = [];
 let exitosas = [];
-//let contador = 0;
-
-
+let numeroInput = 0;
 
 pokemon.items.forEach((item, i) => {  //guardamos las imagenes en un array 
   azar[i] = item.image;              //para podederlas duplicar y organizar
-
 })
 
 azar = azar.concat(azar);  //duplicamos las imagenes
-
 
 for (let i = azar.length - 1; i > 0; i--) {    //algoritmo fisher
 
@@ -41,19 +20,11 @@ for (let i = azar.length - 1; i > 0; i--) {    //algoritmo fisher
 }
 
 
-for (let c = 0; c < azar.length; c++) {
-
-  comparar[c] = 0;
-
-}
-
-
 const contenedor = document.getElementById("contenedor-cartas")
 
 const App = () => {
 
   for (let k = 0; k < azar.length; k++) {  //recorro el array para publicarlas en DOM
-
 
     texto += `<div class="carta-box">
 
@@ -73,9 +44,8 @@ const App = () => {
 
   }
 
-
   contenedor.innerHTML = texto;
-  prueba()
+  comprobacion()
   return contenedor;
 };
 
@@ -89,14 +59,43 @@ function flipCards(id1, id2) {
   cartaIgual2.checked = false
 }
 
-function prueba() {
+function quitarSeleccionadas(matches) {
+  
+  let matches2_1 = [];
+  
+  for (let q = 0; q < matches.length; q++) {
+   
+    if (existeMarcada(matches[q].getAttribute('id'))) {
+      continue;
+    }
+
+    else {
+      matches2_1[matches2_1.length] = matches[q];
+    }
+  }
+  return matches2_1;
+}
+
+function existeMarcada(idItem) {
+  for (let j = 0; j < exitosas.length; j++) {
+    if (exitosas[j] == idItem) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function comprobacion() {
 
   const checkboxes = document.querySelectorAll('.carta-box input');
-
 
   checkboxes.forEach((item) => item.addEventListener('click', function () {
 
     let matches = document.querySelectorAll('input:checked');
+
+    let matches2 = quitarSeleccionadas(matches);
+
+    matches = matches2;
 
     if (matches.length % 2 === 0) {
 
@@ -117,17 +116,26 @@ function prueba() {
 
         exitosas[exitosas.length] = id1;
         exitosas[exitosas.length] = id2;
-        console.log(exitosas[0])
-        console.log(exitosas[1])
+
+        numeroInput = checkboxes.length
+  
+        if(numeroInput == exitosas.length){
+          setTimeout(() => ganador(), 1000);
+        }
+        
       }
       else {
-        setTimeout(() => flipCards(id1, id2), 1000);
+        setTimeout(() => flipCards(id1, id2), 700);
       }
     }
   }))
+
 }
 
+function ganador() {
 
+  alert('Felicitaciones')
+}
 
 
 
