@@ -19,6 +19,7 @@ import pokemon from '../data/pokemon/pokemon.js';
 let comparar = [];
 let texto = "";
 let azar = [];
+let exitosas = [];
 //let contador = 0;
 
 
@@ -114,10 +115,13 @@ function prueba() {
         const cartaIgual2 = document.getElementById(id2)
         cartaIgual2.setAttribute('disabled', 'true')
 
-        //matches = 0;
+        exitosas[exitosas.length] = id1;
+        exitosas[exitosas.length] = id2;
+        console.log(exitosas[0])
+        console.log(exitosas[1])
       }
       else {
-        setTimeout(() => flipCards(id1, id2), 2000);
+        setTimeout(() => flipCards(id1, id2), 1000);
       }
     }
   }))
