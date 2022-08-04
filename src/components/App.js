@@ -20,10 +20,10 @@ for (let i = azar.length - 1; i > 0; i--) {    //algoritmo fisher
 }
 
 
-const contenedor = document.getElementById("contenedor-cartas")
-
 const App = () => {
 
+  const contenedor = document.getElementById("contenedor-cartas")
+  
   for (let k = 0; k < azar.length; k++) {  //recorro el array para publicarlas en DOM
 
     texto += `<div class="carta-box">
@@ -129,7 +129,6 @@ function comprobacion() {
       }
     }
   }))
-
 }
 
 function ganador() {
