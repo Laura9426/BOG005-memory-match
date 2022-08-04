@@ -12,3 +12,12 @@ describe('App', () => {
   });
 });
 
+/*describe('quitarSeleccionadas', () => {
+  it('Deber quitar las seleccionadas', () => {
+    let prueba = document.querySelectorAll('[name="https://www.serebii.net/pokemongo/pokemon/006.png"]:checked');
+    expect(quitarSeleccionadas(prueba[0],prueba[1])).toBe()
+
+  })
+
+
+})*/

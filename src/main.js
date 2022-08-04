@@ -1,5 +1,6 @@
 import App from './components/App.js';
 
+document.getElementById("felicidades").style.display = "none";
 
 document.getElementById('root').appendChild(App());
 
@@ -11,7 +12,7 @@ document.getElementById('root').appendChild(botonrei);
 const boton = document.querySelectorAll ('button');
 
 
-boton[1].addEventListener('click',  function (){
+boton[2].addEventListener('click',  function (){
 
-    window.location.reload()
+    location.reload()
 })

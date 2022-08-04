@@ -20,7 +20,13 @@ describe('App', () => {
 });
 
 
+    /*if (existeMarcada(matches[q].getAttribute('id'))) {
+      continue;
+    }
 
+    else {
+      matches2_1[matches2_1.length] = matches[q];
+    }*/
 
 
 

@@ -65,20 +65,21 @@ function quitarSeleccionadas(matches) {
   
   for (let q = 0; q < matches.length; q++) {
    
-    if (existeMarcada(matches[q].getAttribute('id'))) {
-      continue;
-    }
-
-    else {
+    if (!existeMarcada(matches[q].getAttribute('id'))) {
       matches2_1[matches2_1.length] = matches[q];
     }
+
   }
+  
   return matches2_1;
 }
 
 function existeMarcada(idItem) {
+  console.log(idItem)
   for (let j = 0; j < exitosas.length; j++) {
+    
     if (exitosas[j] == idItem) {
+
       return true;
     }
   }
@@ -133,7 +134,7 @@ function comprobacion() {
 
 function ganador() {
 
-  alert('Felicitaciones')
+  document.getElementById("felicidades").style.display = "block"
 }
 
 
