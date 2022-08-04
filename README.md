@@ -20,52 +20,52 @@ R// Una vez al día se debe hacer ejercicios para la memoria
 
 ### 2. Historias de Usuario
 
-[] Primer historia 
+**A. Primer historia**
 
 Como: participante
 Quiero: agilidad mental
 Para: Tener una buena salud mental
 
-CRITERIOS DE ACEPTACIÓN  
+***CRITERIOS DE ACEPTACIÓN***
 
 Dado que quiero mejorar mi agilidad mental
 Cuando juegue que las imágenes sean llamativas
 Entonces podre hacer el mayor numero de parejas
 
-CONVERSACIÓN (Definición de Terminado):
+***CONVERSACIÓN (Definición de Terminado):***
 
 Letras grandes, imágenes cotidianas, de fácil uso.
 
-[] Segunda historia
+**B. Segunda historia**
 
 Como: jugador
 Quiero: ejercitar mi memoria
 Para: evitar el Alzheimer
 
-CRITERIOS DE ACEPTACIÓN  
+***CRITERIOS DE ACEPTACIÓN***
 
 Dado que quiero ejercitar mi mente
 Cuando abra la App pueda escoger niveles de dificultad
 Entonces podre seguir las recomendaciones de hacer ejercicios mentales.
 
-CONVERSACIÓN (Definición de Terminado):
+***CONVERSACIÓN (Definición de Terminado):***
 
 El tiempo en el que se muestren las imágenes sea adecuado para poder retener la imagen
 Al finalizar el juego indique cuantos aciertos y fallas.
 
-[] Tercer historia
+**C. Tercer historia**
 
 Como: beneficiaria
 Quiero: divertirme
 Para: tener pasatiempo
 
-CRITERIOS DE ACEPTACIÓN  
+***CRITERIOS DE ACEPTACIÓN***
 
 Dado que tengo tiempo libre
 Cuando utilice la aplicación quiero diferentes temáticas
 Entonces podre pasar un tiempo agradable
 
-CONVERSACIÓN (Definición de Terminado):
+***CONVERSACIÓN (Definición de Terminado):***
 
 Me gustaría encontrar temáticas como historia y naturaleza
 Que me indique cual es mi mejor tiempo.
