@@ -23,7 +23,7 @@ for (let i = azar.length - 1; i > 0; i--) {    //algoritmo fisher
 const App = () => {
 
   const contenedor = document.getElementById("contenedor-cartas")
-  
+
   for (let k = 0; k < azar.length; k++) {  //recorro el array para publicarlas en DOM
 
     texto += `<div class="carta-box">
@@ -59,25 +59,25 @@ function flipCards(id1, id2) {
   cartaIgual2.checked = false
 }
 
-function quitarSeleccionadas(matches) {
-  
+export function quitarSeleccionadas(matches) {
+
   let matches2_1 = [];
-  
+
   for (let q = 0; q < matches.length; q++) {
-   
+
     if (!existeMarcada(matches[q].getAttribute('id'))) {
       matches2_1[matches2_1.length] = matches[q];
     }
 
   }
-  
+
   return matches2_1;
 }
 
 function existeMarcada(idItem) {
-  console.log(idItem)
+
   for (let j = 0; j < exitosas.length; j++) {
-    
+
     if (exitosas[j] == idItem) {
 
       return true;
@@ -86,7 +86,7 @@ function existeMarcada(idItem) {
   return false;
 }
 
-function comprobacion() {
+export function comprobacion() {
 
   const checkboxes = document.querySelectorAll('.carta-box input');
 
@@ -119,11 +119,11 @@ function comprobacion() {
         exitosas[exitosas.length] = id2;
 
         numeroInput = checkboxes.length
-  
-        if(numeroInput == exitosas.length){
+
+        if (numeroInput == exitosas.length) {
           setTimeout(() => ganador(), 1000);
         }
-        
+
       }
       else {
         setTimeout(() => flipCards(id1, id2), 700);
@@ -140,3 +140,4 @@ function ganador() {
 
 
 export default App;
+
