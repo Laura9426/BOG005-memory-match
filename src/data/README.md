@@ -1,20 +1,4 @@
-# Memory Match
-
-1. Definición del producto
-
-[¿Quiénes son los principales usuarios de producto?]
-
-R// Personas adultas mayores de 50 años.
-
-[¿Cuáles son los objetivos de estos usuarios en relación con el producto?]
-
-R// Ejercitar la mente para evitar enfermedades como: la demencia senil, Alzheimer, entre otras.
-
-[¿Cuándo utilizan o utilizarían el producto?]
-
-R// Una vez al día se debe hacer ejercicios para la memoria
-
-
+# Data (sets de cartas)
 
 Este directorio (carpeta) contiene dos fuentes de datos (sets de cartas) que
 podemos usar en el proyecto. Cada set está en una sub-carpeta distinta:
