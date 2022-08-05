@@ -133,5 +133,5 @@ export function comprobacion() {
 
 function ganador() {
   alert("gano")
-  //document.getElementById("felicidades").style.display = "block"
+  document.getElementById("felicidades").style.display = "block"
 }
