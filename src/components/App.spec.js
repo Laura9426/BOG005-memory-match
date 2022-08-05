@@ -8,7 +8,7 @@ import {App, quitarSeleccionadas, comprobacion, existeMarcada} from './App.js';
     
   })
 
-  //TODO se pone de primera porq tenemos problemas pra limpiar el DOM
+  //TODO se pone de primera porq tenemos problemas para limpiar el DOM
   it('deberia pintar 18 cartas', () => {
     App();
     expect(document.querySelectorAll('.carta-box').length).toBe(18);
@@ -30,12 +30,6 @@ describe('quitarSeleccionadas', () => {
     expect(typeof quitarSeleccionadas).toBe('function');
   })
 
-
-  /*it('Deber quitar las seleccionadas', () => {
-    let prueba = document.querySelectorAll('[name="https://www.serebii.net/pokemongo/pokemon/006.png"]:checked');
-    expect(quitarSeleccionadas(prueba)).toBe()
-
-  })*/
 });
 
 describe('comprobacion', () => {
@@ -44,18 +38,54 @@ describe('comprobacion', () => {
     expect(typeof comprobacion).toBe('function');
   })
 
-  it('testear que los checkbox tengan un eventListener asociado a click', ()=>{
+  it('carta1 == carta2 debe retornar true', ()=>{
     document.body.innerHTML = `<div id = "contenedor-cartas"></div>`;
     App();
     const cartas = document.getElementsByName('wartortle');
-    console.log('carticas', cartas.length);
+    const cartas1 = document.getElementsByName('charmeleon');
+    //console.log('carticas', cartas.length);
     //const cartaBox = document.querySelector('.carta-box input');
+    cartas[0].click();
+    cartas1[1].click();
+    
+    //console.log(document.querySelectorAll('input:checked').length)
+
+    expect(cartas==cartas1).toBe(false);
+  })
+
+  it('carta1 == carta2 debe retornar false', ()=>{
+    document.body.innerHTML = `<div id = "contenedor-cartas"></div>`;
+    App();
+    const cartas = document.getElementsByName('wartortle');
+    
     cartas[0].click();
     cartas[1].click();
     
+    //console.log(document.querySelectorAll('input:checked').length)
 
-    console.log(document.querySelectorAll('input:checked').length)
+    expect(cartas==cartas).toBe(true);
   })
+
+  it('El id deberia tener el atributo disabled', ()=>{
+    document.body.innerHTML = `<div id = "contenedor-cartas"></div>`;
+    App();
+    const cartas = document.getElementsByName('charmeleon');
+    //console.log('carticas', cartas.length);
+    //const cartaBox = document.querySelector('.carta-box input');
+    cartas[0].click();
+    cartas[1].click();
+    //console.log(cartas.length)
+
+    const input1 = document.querySelectorAll('input:checked')
+    const idInput1 = input1[0].getAttribute('id')
+
+    const idInput2 = document.getElementById(idInput1)
+
+    expect(idInput2.getAttribute('disabled')).toBe('true');
+
+  })
+
+
 
 });
 
