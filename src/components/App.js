@@ -6,7 +6,7 @@ let exitosas = [];
 let numeroInput = 0;
 
 pokemon.items.forEach((item, i) => {  //guardamos las imagenes en un array 
-  azar[i] = item.image;              //para podederlas duplicar y organizar
+  azar[i] = item;              //para podederlas duplicar y organizar
 })
 
 azar = azar.concat(azar);  //duplicamos las imagenes
@@ -20,15 +20,14 @@ for (let i = azar.length - 1; i > 0; i--) {    //algoritmo fisher
 }
 
 
-const App = () => {
+export const App = () => {
 
   const contenedor = document.getElementById("contenedor-cartas")
-
   for (let k = 0; k < azar.length; k++) {  //recorro el array para publicarlas en DOM
 
     texto += `<div class="carta-box">
 
-  <input type="checkbox" id= "item${k}" name = "${azar[k]}" >
+  <input type="checkbox" id= "item${k}" name = "${azar[k].id}" >
   <label for= "item${k}">
 
     <div class="carta">
@@ -36,7 +35,7 @@ const App = () => {
         <img src="imagenes/bombillo.png" width="200" height="250px">
       </div>
       <div class="cara detras">
-        <img src= "${azar[k]}" width="200" height="250px">
+        <img src= "${azar[k].image}" width="200" height="250px">
       </div>
     </div>
   </label>
@@ -74,7 +73,7 @@ export function quitarSeleccionadas(matches) {
   return matches2_1;
 }
 
-function existeMarcada(idItem) {
+export function existeMarcada(idItem) {
 
   for (let j = 0; j < exitosas.length; j++) {
 
@@ -136,8 +135,3 @@ function ganador() {
 
   document.getElementById("felicidades").style.display = "block"
 }
-
-
-
-export default App;
-

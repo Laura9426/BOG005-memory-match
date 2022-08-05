@@ -1,4 +1,4 @@
-import App from './components/App.js';
+import {App} from './components/App.js';
 
 document.getElementById("felicidades").style.display = "none";
 

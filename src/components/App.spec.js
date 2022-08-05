@@ -1,9 +1,7 @@
-import App from './App.js';
-import { quitarSeleccionadas } from './App.js'
-import { comprobacion } from './App.js';
+import {App, quitarSeleccionadas, comprobacion, existeMarcada} from './App.js';
 
 
-describe('App', () => {
+/*describe('App', () => {
 
   beforeEach(()=>{ 
     document.body.innerHTML = `<div id = "contenedor-cartas"></div>`;
@@ -25,7 +23,7 @@ describe('App', () => {
     expect(typeof App).toBe('function');
   });
   
-});
+});*/
 
 describe('quitarSeleccionadas', () => {
   it('deberia ser una funcion', () => {
@@ -47,8 +45,24 @@ describe('comprobacion', () => {
   })
 
   it('testear que los checkbox tengan un eventListener asociado a click', ()=>{
-    document.body.innerHTML = ''
+    document.body.innerHTML = `<div id = "contenedor-cartas"></div>`;
+    App();
+    const cartas = document.getElementsByName('wartortle');
+    console.log('carticas', cartas.length);
+    //const cartaBox = document.querySelector('.carta-box input');
+    cartas[0].click();
+    cartas[1].click();
+    
+
+    console.log(document.querySelectorAll('input:checked').length)
   })
 
 });
+
+describe('existeMarcada', ()=> {
+  it('Existe marcada deberia retornar un false', ()=>{
+    expect(existeMarcada('item20')).toBe(false);
+
+  })
+})
 
