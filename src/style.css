@@ -32,6 +32,15 @@ header {
   margin: 0 auto;
 }
 
+#contenedorPrincipal{
+  width: 100%;
+  max-width: 900px;
+  padding: 15px 15px 5px 15px;
+  /*border: 1px solid white;*/
+  margin: 0 auto;
+  justify-content: center;
+
+}
 
 #root {
 

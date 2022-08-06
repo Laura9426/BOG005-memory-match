@@ -1,7 +1,7 @@
 import {App, quitarSeleccionadas, comprobacion, existeMarcada} from './App.js';
 
 
-/*describe('App', () => {
+describe('App', () => {
 
   beforeEach(()=>{ 
     document.body.innerHTML = `<div id = "contenedor-cartas"></div>`;
@@ -23,7 +23,7 @@ import {App, quitarSeleccionadas, comprobacion, existeMarcada} from './App.js';
     expect(typeof App).toBe('function');
   });
   
-});*/
+});
 
 describe('quitarSeleccionadas', () => {
   it('deberia ser una funcion', () => {
@@ -38,7 +38,7 @@ describe('comprobacion', () => {
     expect(typeof comprobacion).toBe('function');
   })
 
-  it('carta1 == carta2 debe retornar true', ()=>{
+  it('carta1 == carta2 debe retornar false', ()=>{
     document.body.innerHTML = `<div id = "contenedor-cartas"></div>`;
     App();
     const cartas = document.getElementsByName('wartortle');
@@ -53,7 +53,7 @@ describe('comprobacion', () => {
     expect(cartas==cartas1).toBe(false);
   })
 
-  it('carta1 == carta2 debe retornar false', ()=>{
+  it('carta1 == carta2 debe retornar true', ()=>{
     document.body.innerHTML = `<div id = "contenedor-cartas"></div>`;
     App();
     const cartas = document.getElementsByName('wartortle');
