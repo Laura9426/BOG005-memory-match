@@ -7,11 +7,13 @@
 
 body {
   background: #f2fef5;
-  margin: 20px;
   font-family: 'Roboto', sans-serif;
   font-size: 17px;
   line-height: 21px;
   font-weight: 400;
+  box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 }
 
 h1 {
@@ -20,9 +22,8 @@ h1 {
   font-size: 70px;
   line-height: 73px;
   text-align: center;
-  text-transform: uppercase;
-  /*mayusculas*/
-  margin: 40px;
+  text-transform: uppercase; /*mayusculas*/
+  margin: 40px 0;
 }
 
 header {
@@ -36,10 +37,15 @@ header {
   width: 100%;
   max-width: 900px;
   padding: 15px 15px 5px 15px;
-  /*border: 1px solid white;*/
   margin: 0 auto;
-  justify-content: center;
+  text-align: center;
 
+}
+
+#contenedorPrincipal img{
+
+width: 100%;
+max-width: 400px;
 }
 
 #root {
@@ -105,7 +111,7 @@ header {
 #iniciar {
 
   color: white;
-  background: #0D99FF;
+  background: #0D99FF url(../src/imagenes/play.png) no-repeat;
   background-size: 35px;
   background-position: 10px;
   border: 0;
@@ -181,19 +187,36 @@ header {
 #felicidades {
 
 font-size: 20px;
-width: 400px;
-height: 400px;
+width: 90%;
+max-width: 400px;
 background-color: greenyellow;
 border: 5px solid rgb(126, 232, 19);
-padding: 30px;
 text-align: center;
 border-radius: 40px;
 position: fixed;
-top: 50%;
-margin-top: -200px;
-left: 50%;
-margin-left: -200px;
 z-index: 1;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-moz-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+
+}
+
+#felicidades p:first-child{
+
+  font-size: 35px;
+  list-style: 38px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #0D99FF;
+}
+
+#felicidades img{
+
+  width: 90%;
+  max-width: 220px;
+  margin-bottom: 20px;
 
 }
 
@@ -203,12 +226,10 @@ z-index: 1;
   background-size: 35px;
   background-position: 10px;
   border: 0;
-  border-radius: 40px;
-  /*esquinas redondas*/
+  border-radius: 40px; /*esquinas redondas*/
   padding: 12px 12px ;
   font-size: 15px;
-  font-weight: bold;
-  /*letra negrilla*/
+  font-weight: bold; /*letra negrilla*/
   cursor: pointer;
   margin-top: 30px;
   text-transform: uppercase;
@@ -221,4 +242,36 @@ z-index: 1;
   box-shadow: 0 0 10px #9553f9;
   font-size: 15px;
   transition: all 0.3s linear;
+}
+
+@media only screen and (min-width : 400px) and (max-width : 600px){
+
+  h1{
+
+    font-size: 50px;
+    line-height: 53px;
+  }
+ 
+}
+
+@media only screen and (min-width : 50px) and (max-width : 399px){
+
+  h1{
+
+    font-size: 35px;
+    line-height: 38px;
+  }
+
+  #contenedorPrincipal img{
+
+  width: 80%;
+  
+  }
+
+  #iniciar {
+
+    padding: 12px 15px 12px 50px;
+    font-size: 15px;
+  
+  }
 }
