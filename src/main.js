@@ -1,6 +1,6 @@
 import {App} from './components/App.js';
 
-//document.getElementById("felicidades").style.display = "none";
+document.getElementById("felicidades").style.display = "none";
 
 document.getElementById('root').appendChild(App());
 

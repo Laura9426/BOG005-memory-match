@@ -3,6 +3,9 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 }
 
 body {
@@ -11,9 +14,7 @@ body {
   font-size: 17px;
   line-height: 21px;
   font-weight: 400;
-  box-sizing:border-box;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
+
 }
 
 h1 {
@@ -69,11 +70,10 @@ max-width: 400px;
 
 .carta-box {
 
-  width: 200px;
-  height: 250px;
+  width: 21%;
   position: relative;
   perspective: 1000px;
-  margin: 0 10px 20px 10px;
+  margin: 0 2% 20px 2%;
 }
 
 .carta-box input[type=checkbox] {
@@ -81,8 +81,8 @@ max-width: 400px;
   position: absolute;
   opacity: 0;
   z-index: 1;
-  width: 200px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
 }
@@ -96,9 +96,16 @@ max-width: 400px;
   transition: all 0.5s linear;
 }
 
+.carta img{
+
+  width: 100%;
+  
+}
+
 .frente {
   position: absolute;
   backface-visibility: hidden;
+  width: 100%;
 }
 
 .detras {
@@ -150,6 +157,7 @@ max-width: 400px;
   cursor: pointer;
   margin-top: 30px;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 #reiniciar:hover {
@@ -203,13 +211,20 @@ transform: translate(-50%, -50%);
 
 }
 
+#felicidades p{
+
+  padding: 0 30px;
+}
+
 #felicidades p:first-child{
 
   font-size: 35px;
-  list-style: 38px;
+  line-height:  38px;
   text-transform: uppercase;
   font-weight: bold;
   color: #0D99FF;
+  margin-top: 30px;
+  padding: 0;
 }
 
 #felicidades img{
@@ -217,6 +232,7 @@ transform: translate(-50%, -50%);
   width: 90%;
   max-width: 220px;
   margin-bottom: 20px;
+
 
 }
 
@@ -231,7 +247,7 @@ transform: translate(-50%, -50%);
   font-size: 15px;
   font-weight: bold; /*letra negrilla*/
   cursor: pointer;
-  margin-top: 30px;
+  margin: 30px 0;
   text-transform: uppercase;
 }
 
@@ -252,6 +268,9 @@ transform: translate(-50%, -50%);
     line-height: 53px;
   }
  
+  .carta-box {
+    width: 29.3%;
+}
 }
 
 @media only screen and (min-width : 50px) and (max-width : 399px){
@@ -274,4 +293,32 @@ transform: translate(-50%, -50%);
     font-size: 15px;
   
   }
+
+  #felicidades {
+
+    font-size: 17px;
+    
+    }
+    
+    #felicidades p{
+    
+      padding: 0 15px;
+    }
+    
+    #felicidades p:first-child{
+    
+      font-size: 25px;
+      line-height: 28px;
+    } 
+
+    .carta-box {
+      width: 31.3%;
+      margin: 0 1% 20px 1%;
+  }
+
+  #reiniciar {
+    
+    margin-top: 0px;
+    
+}
 }

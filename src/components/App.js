@@ -32,10 +32,10 @@ export const App = () => {
 
     <div class="carta">
       <div class="frente">
-        <img src="imagenes/bombillo.png" width="200" height="250px">
+        <img src="imagenes/bombillo.jpg" width="100%">
       </div>
       <div class="cara detras">
-        <img src= "${azar[k].image}" width="200" height="250px">
+        <img src= "${azar[k].image}" width="100%">
       </div>
     </div>
   </label>
@@ -132,6 +132,5 @@ export function comprobacion() {
 }
 
 function ganador() {
-  alert("gano")
   document.getElementById("felicidades").style.display = "block"
 }
