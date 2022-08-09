@@ -10,7 +10,7 @@
 
 body {
   background: #f2fef5;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif; /*Fuente que llame de google fonts*/
   font-size: 17px;
   line-height: 21px;
   font-weight: 400;
@@ -60,11 +60,9 @@ max-width: 400px;
   padding: 15px 15px 5px 15px;
   /*border: 1px solid white;*/
   margin: 0 auto;
-  display: flex;
-  /**/
-  flex-wrap: wrap;
-  /*acomoda las imagenes pone solo las que quedan y las demas las bajan*/
-  align-items: flex-start;
+  display: flex; /* Elementos denytro de ese div se comporten flexibles, quede uno al lado del otro */
+  flex-wrap: wrap; /* por defecto el display: flex los pone todos al lado sin repetar margen, wrap acomoda las imagenes pone solo las que quepan y las demas las baja*/
+  align-items: flex-start; /*ubica los objetos en el eje x*/
   justify-content: center;
 }
 
